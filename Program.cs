@@ -5,46 +5,47 @@ namespace VSConsoleApp1
 {
     class Program
     {
-        private static void Main(string[] args)
+        private static void Main(string[] args) 
         {
-            int[] testInput = {2, 3, 10, 3, 40};
-            Console.WriteLine(AlmostIncreasingSequence(testInput));
-        }
-
-        private static bool AlmostIncreasingSequence(int[] sequence)
-        {
-            bool foundOne = false;
-
-            for (int i = -1, j = 0, k = 1; k < sequence.Length; k++)
+            int[][] jaggedArray = new int [][]
             {
-                bool deleteCurrent = false;
+                new int[] { 0, 1, 1, 2 },
+                new int[] { 0, 5, 0, 0 }, 
+                new int[] { 2, 0, 3, 3 } 
+            };   
 
-                if (sequence[j] >= sequence[k])
+            int test = MatrixElementSum(jaggedArray);
+
+            Console.WriteLine($"Test val: {test}");
+        } 
+
+        public static int MatrixElementSum(int[][] matrix)
+        {
+            Int32 runningSum = 0;
+
+            // iterate each matrix column
+            for(int i = 0; i<matrix[0].Length; i++)
+            {
+                // iterate each row
+                for (int j = 0; j<matrix.Length; j++)
                 {
-                    if (foundOne)
+                    // grab the element of array j, item i (aka column j, row i)
+                    Int32 currentElement = matrix[j][i];
+
+                    if(currentElement <= 0)
                     {
-                        return false;
+                        // exit loop for this column if a val is 0 or less
+                        break;
                     }
-                    foundOne = true;
-
-                    if (k > 1 && sequence[i] >= sequence[k])
+                    else
                     {
-                        deleteCurrent = true;
+                        // add val to running sum
+                        runningSum += currentElement;
                     }
-                }
-
-                if (!foundOne)
-                {
-                    i = j;
-                }
-
-                if (!deleteCurrent)
-                {
-                    j = k;
                 }
             }
 
-            return true;
+            return runningSum;
         }
     }
 }
