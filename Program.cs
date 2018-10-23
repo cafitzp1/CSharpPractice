@@ -7,26 +7,44 @@ namespace VSConsoleApp1
     {
         private static void Main(string[] args)
         {
-            Int32[] arr = {2, 3, 4, 10, 40};
-            Console.WriteLine(BinarySearch(arr, 0, arr.Length-1, 10));
+            int[] testInput = {2, 3, 10, 3, 40};
+            Console.WriteLine(AlmostIncreasingSequence(testInput));
         }
 
-        private static int BinarySearch(Int32[] arr, Int32 l, Int32 r, Int32 x)
+        private static bool AlmostIncreasingSequence(int[] sequence)
         {
-            if(r >= l)
+            bool foundOne = false;
+
+            for (int i = -1, j = 0, k = 1; k < sequence.Length; k++)
             {
-                Int32 mid = l+(r-l)/2;
+                bool deleteCurrent = false;
 
-                if(arr[mid] == x)
-                    return mid;
+                if (sequence[j] >= sequence[k])
+                {
+                    if (foundOne)
+                    {
+                        return false;
+                    }
+                    foundOne = true;
 
-                if(arr[mid] < x)
-                    return BinarySearch(arr, mid+1, r, x);
+                    if (k > 1 && sequence[i] >= sequence[k])
+                    {
+                        deleteCurrent = true;
+                    }
+                }
 
-                return BinarySearch(arr, l, mid-1, x);
+                if (!foundOne)
+                {
+                    i = j;
+                }
+
+                if (!deleteCurrent)
+                {
+                    j = k;
+                }
             }
 
-            return -1;
+            return true;
         }
     }
 }
