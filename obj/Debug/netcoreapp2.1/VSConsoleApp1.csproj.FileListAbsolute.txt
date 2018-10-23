@@ -1,0 +1,11 @@
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/bin/Debug/netcoreapp2.1/VSConsoleApp1.deps.json
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/bin/Debug/netcoreapp2.1/VSConsoleApp1.runtimeconfig.json
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/bin/Debug/netcoreapp2.1/VSConsoleApp1.runtimeconfig.dev.json
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/bin/Debug/netcoreapp2.1/VSConsoleApp1.dll
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/bin/Debug/netcoreapp2.1/VSConsoleApp1.pdb
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/obj/Debug/netcoreapp2.1/VSConsoleApp1.csprojAssemblyReference.cache
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/obj/Debug/netcoreapp2.1/VSConsoleApp1.csproj.CoreCompileInputs.cache
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/obj/Debug/netcoreapp2.1/VSConsoleApp1.AssemblyInfoInputs.cache
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/obj/Debug/netcoreapp2.1/VSConsoleApp1.AssemblyInfo.cs
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/obj/Debug/netcoreapp2.1/VSConsoleApp1.dll
+/Users/Connor/Documents/Coding/C#/VSConsoleApp1/obj/Debug/netcoreapp2.1/VSConsoleApp1.pdb
