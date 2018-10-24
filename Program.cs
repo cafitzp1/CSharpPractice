@@ -7,7 +7,7 @@ namespace VSConsoleApp1
     {
         private static void Main(string[] args) 
         {
-            
+     	    Console.WriteLine("Hello, this is a test.");    
         } 
     }
 }
