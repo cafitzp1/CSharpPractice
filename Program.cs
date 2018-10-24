@@ -11,6 +11,8 @@ namespace VSConsoleApp1
             dynamic target = "Connor";
             dynamic arg = "nn";
             Boolean result = target.Contains(arg);
+
+     	    Console.WriteLine("Hello, this is a test.");    
         } 
     }
 }
