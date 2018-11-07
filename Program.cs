@@ -8,11 +8,15 @@ namespace VSConsoleApp1
     {
         private static void Main(string[] args) 
         {
-            dynamic target = "Connor";
-            dynamic arg = "nn";
-            Boolean result = target.Contains(arg);
-
-     	    Console.WriteLine("Hello, this is a test.");    
+            Console.WriteLine(fibonacci(3));
         } 
+
+        private static Int32 fibonacci(Int32 number)
+        {
+            if (number < 2) 
+                return number;
+                
+            return fibonacci(number - 1) + fibonacci(number - 2);
+        }
     }
 }
